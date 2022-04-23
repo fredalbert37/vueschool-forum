@@ -35,10 +35,14 @@
 
 <script>
 import sourceData from '@/data.json'
+import PageHome from '@/components/PageHome.vue'
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  components: {
+    PageHome
   },
   data() {
     return {
