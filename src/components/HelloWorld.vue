@@ -28,25 +28,21 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
     <div>
-      {{threads}}
+
     </div>
   </div>
 </template>
 
 <script>
-import sourceData from '@/data.json'
-import PageHome from '@/components/PageHome.vue'
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
   },
-  components: {
-    PageHome
-  },
   data() {
     return {
-      threads: sourceData.threads
+
     }
   },
 }
