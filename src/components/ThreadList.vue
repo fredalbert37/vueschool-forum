@@ -8,7 +8,7 @@
             <router-link :to="{name:'ThreadShow', params: {id: thread.id}}">{{thread.title}}</router-link>
           </p>
           <p class="text-faded text-xsmall">
-            By <a href="#">{{userById(thread.userId).name}}</a>, {{thread.createdAt}}
+            By <a href="#">{{userById(thread.userId).name}}</a>, <AppDate :timestamp="thread.publishedAt" />
           </p>
         </div>
          <div class="activity">
@@ -24,7 +24,7 @@
             <p class="text-xsmall">
               <a href="#">{{userById(thread.userId).name}}</a>
             </p>
-            <p class="text-xsmall text-faded">{{thread.publishedAt}}</p>
+            <p class="text-xsmall text-faded"> <app-date :timestamp="thread.publishedAt" /> </p>
           </div>
         </div>
 
@@ -36,6 +36,7 @@
 </template>
 <script>
 import sourceData from "@/data.json";
+
 export default {
   props: {
     threads: {
