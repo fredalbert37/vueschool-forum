@@ -12,15 +12,15 @@
 </template>
 
 <script>
-import sourceData from "@/data.json";
+"@/data.json";
 
 export default {
   name: "PostEditor.vue",
   data() {
     return {
       text: '',
-      threads: sourceData.threads,
-      posts: sourceData.posts,
+      threads: this.$store.state.threads,
+      posts: this.$store.state.posts,
     };
   },
   methods:{
