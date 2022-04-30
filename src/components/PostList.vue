@@ -47,10 +47,10 @@ export default {
       type: Array
     }
   },
-  data() {
-    return {
-      users: this.$store.state.users,
-    };
+  computed: {
+    users(){
+      return this.$store.state.users
+    }
   },
   methods: {
     userById(userId) {

@@ -12,7 +12,7 @@
 
 <script>
 import ForumList from "@/components/ForumList";
-'
+
 
 export default {
   name: "CategoryList",

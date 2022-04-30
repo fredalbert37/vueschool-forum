@@ -35,7 +35,6 @@
   </div>
 </template>
 <script>
-"@/data.json";
 
 export default {
   props: {
@@ -44,20 +43,22 @@ export default {
       required: true
     }
   },
-  data() {
-        return {
-            posts: this.$store.state.posts,
-            users: this.$store.state.users,
-        };
+  computed: {
+    posts() {
+      return this.$store.state.posts;
     },
-    methods: {
-        postById(postId) {
-            return this.posts.find((p) => p.id === postId);
-        },
-        userById(userId) {
-            return this.users.find((u) => u.id === userId);
-        },
+    users() {
+      return this.$store.state.users;
     },
+  },
+  methods: {
+      postById(postId) {
+          return this.posts.find((p) => p.id === postId);
+      },
+      userById(userId) {
+          return this.users.find((u) => u.id === userId);
+      },
+  },
 };
 </script>
 <style lang=""></style>
